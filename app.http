@@ -1,0 +1,42 @@
+GET http://localhost:3001
+
+###
+POST http://localhost:3001/api/auth/signup
+Content-Type: application/json
+
+{
+    "name":"veeru",
+    "email":"veeru@gmail.com",
+    "password":"Veeru@2025"
+}
+
+###
+POST http://localhost:3001/api/auth/login
+Content-Type: application/json
+
+{
+    "email":"veeru@gmail.com",
+    "password":"Veeru@2025"
+}
+
+###
+POST http://localhost:3001/api/categories
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjlmY2RmNzZiZDU3OGYyMjJjMTJhYiIsIm5hbWUiOiJ2ZWVydSIsImlhdCI6MTc0NDQ0Nzg5OCwiZXhwIjoxNzQ3MDM5ODk4fQ.beAvS5FcIiGxmHSlwFe5cT3mt6DKfpRoWfwl7RBIlKE
+
+[
+    {
+        "name":"Cotton Clothes",
+        "count":25,
+        "image_url":"https://res.cloudinary.com/daehuqvdc/image/upload/v1744447604/Spring_Walmart_Try_On_-_Sweet_Motherly_ax6nlo.jpg"
+    }
+]
+
+###
+PUT http://localhost:3001/api/categories/67f9fee4946bec2e7722d725
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjlmY2RmNzZiZDU3OGYyMjJjMTJhYiIsIm5hbWUiOiJ2ZWVydSIsImlhdCI6MTc0NDQzNjY4NCwiZXhwIjoxNzQ3MDI4Njg0fQ.8aIJoEQsC2yP1r3AfYEuyd9GRlr8dRltQvL6KrrS1G8
+
+{
+    "name":"winter Clothes"
+}
